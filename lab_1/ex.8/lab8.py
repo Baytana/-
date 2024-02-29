@@ -13,7 +13,8 @@ def load_contacts():
         return {}
 
 def find_contact(contacts, name):
-    if name in contacts:    
+    if name in contacts:
+        print('---------------------------------')        
         print(f"Адрес электронной почты для {name}: {contacts[name]}")
     else:
         print(f"{name} не найден в списке контактов.")
@@ -21,12 +22,14 @@ def find_contact(contacts, name):
 def add_contact(contacts, name, email):
     contacts[name] = email
     save_contacts(contacts)
+    print('---------------------------------')
     print(f"{name} добавлен в список контактов с адресом электронной почты: {email}")
 
 def update_contact(contacts, name, email):
     if name in contacts:
         contacts[name] = email
         save_contacts(contacts)
+        print('---------------------------------')
         print(f"Адрес электронной почты для {name} обновлен: {email}")
     else:
         print(f"{name} не найден в списке контактов.")
@@ -35,6 +38,7 @@ def delete_contact(contacts, name):
     if name in contacts:
         del contacts[name]
         save_contacts(contacts)
+        print('---------------------------------')
         print(f"{name} удален из списка контактов.")
     else:
         print(f"{name} не найден в списке контактов.")
