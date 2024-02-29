@@ -1,0 +1,6 @@
+sun: 1
+task: 2
+rick: 2
+mask: 2
+licksun: 1
+lick: 1
